@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ Starts a flask web app """
 
-from web_flask import app
-from flask import render_template
+from flask import render_template, Flask
 from models import storage
 from models.state import State
 from models.amenity import Amenity
+
+app = Flask(__name__)
 
 
 @app.route('/hbnb_filters', strict_slashes=False)
